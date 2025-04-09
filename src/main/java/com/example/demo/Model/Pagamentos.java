@@ -1,5 +1,6 @@
-package Model;
+package  com.example.demo.Model;
 
+import com.example.demo.Model.Alugueis;
 import jakarta.persistence.*;
 import lombok.Data;
 
