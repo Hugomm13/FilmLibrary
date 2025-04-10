@@ -3,8 +3,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import java.util.List;
 
-@Entity
 @Data
+@Entity
 @Table(name = "Generos")
 public class Generos {
     @Id

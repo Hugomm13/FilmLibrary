@@ -16,10 +16,13 @@ public class Alugueis {
     @Id // define que o campo abaixo é a chave primaria
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @ManyToMany // referencia que muitos aluguéis podem estar ligado a um unico cliente
-    @JoinColumn(name = "cliente_id", nullable = false)
+     // referencia que muitos aluguéis podem estar ligado a um unico cliente
     // Você está dizendo:"Olha JPA, use a coluna cliente_id da tabela alugueis para se relacionar com a entidade Cliente."
-    private Clientes cliente; // associação com a entidade Cliente
+     // associação com a entidade Cliente
+
+    @ManyToOne
+    @JoinColumn(name = "cliente_id", nullable = false)
+    private Clientes cliente;
 
 
     private LocalDateTime dataAluguel = LocalDateTime.now(); // quando criada o objeto a data será criada
